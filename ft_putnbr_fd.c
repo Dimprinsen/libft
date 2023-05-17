@@ -6,7 +6,7 @@
 /*   By: ttinnerh <ttinnerh@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 21:34:19 by ttinnerh          #+#    #+#             */
-/*   Updated: 2023/05/13 16:25:47 by ttinnerh         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:42:25 by ttinnerh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n = n * -1;
+		n = -n;
 		ft_putnbr_fd(n, fd);
 	}
 	else if (n > 9)
