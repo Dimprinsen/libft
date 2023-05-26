@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttinnerh <ttinnerh@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 16:39:59 by ttinnerh          #+#    #+#             */
-/*   Updated: 2023/05/24 22:56:35 by ttinnerh         ###   ########.fr       */
+/*   Created: 2023/05/24 13:26:13 by ttinnerh          #+#    #+#             */
+/*   Updated: 2023/05/24 13:27:04 by ttinnerh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+t_list	*ft_lstnew(void *content)
 {
-	int	nbr;
-	int	sign;
-
-	nbr = 0;
-	sign = 1;
-	while (ft_isspace(*str))
-	{
-		str++;
-	}
-	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			sign = -sign;
-		str++;
-	}
-	while (*str >= 48 && *str <= 57)
-	{
-		nbr = nbr * 10;
-		nbr = nbr + *str - 48;
-		str++;
-	}
-	return (nbr * sign);
-}
+	content: The content to create the node with.
+Return value The new node
+External functs. malloc
+Description Allocates (with malloc(3)) and returns a new node.
+The member variable ’content’ is initialized with
+the value of the parameter ’content’. The variable
+’next’ is initialized to NULL.
