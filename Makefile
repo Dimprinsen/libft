@@ -6,7 +6,7 @@
 #    By: ttinnerh <ttinnerh@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/10 18:35:57 by ttinnerh          #+#    #+#              #
-#    Updated: 2023/05/24 01:54:37 by ttinnerh         ###   ########.fr        #
+#    Updated: 2023/05/29 15:23:03 by ttinnerh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ FILES := ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c \
 			ft_calloc.c ft_striteri.c ft_strdup.c ft_substr.c ft_strmapi.c \
 			ft_strjoin.c ft_strtrim.c ft_itoa.c ft_split.c
-BONUSFILES := 
+BONUSFILES := ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+				ft_lstmap.c
 OBJS := $(FILES:%.c=%.o)
 BONUSOBJS := $(BONUSFILES:%.c=%.o)
 HEADER = libft.h
